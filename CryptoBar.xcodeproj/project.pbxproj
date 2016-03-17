@@ -37,6 +37,7 @@
 		657603B21C9A7A3200DEB3B7 /* PoloniexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoloniexHelper.swift; sourceTree = "<group>"; };
 		657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinMarketHelper.swift; sourceTree = "<group>"; };
 		657603B61C9A7A5D00DEB3B7 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CryptoBar.entitlements; sourceTree = "<group>"; };
 		86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +82,7 @@
 		657603951C9A76C000DEB3B7 /* CryptoBar */ = {
 			isa = PBXGroup;
 			children = (
+				657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */,
 				657603961C9A76C000DEB3B7 /* AppDelegate.swift */,
 				657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */,
 				657603A91C9A798500DEB3B7 /* Persistance */,
@@ -165,6 +167,12 @@
 				TargetAttributes = {
 					657603921C9A76C000DEB3B7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = T9AT2A746N;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -362,11 +370,15 @@
 			baseConfigurationReference = 05D1CBD47410688A561AE1C5 /* Pods-CryptoBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CryptoBar/CryptoBar.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CryptoBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unathichonco.CryptoBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -375,11 +387,15 @@
 			baseConfigurationReference = 86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CryptoBar/CryptoBar.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CryptoBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unathichonco.CryptoBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

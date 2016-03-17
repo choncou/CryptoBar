@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let price = String(format: "%.2f", dollarPrice)
         let bprice = String(format: "%.4f", ether.last)
         statusItem.title = "\(title) = $\(price))"
-        bitCoinPrice.title = "\(title)=$\(bprice)"
+        bitCoinPrice.title = "\(title)=\(bprice) BTC"
         print(statusItem.title)
         self.setChangeIcon(ether.percentChange)
     }
@@ -77,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let price = String(format: "%.2f", dollarPrice)
         let bprice = String(format: "%.4f", ether.last)
         statusItem.title = "\(title)=$\(price)"
-        bitCoinPrice.title = "\(title)=$\(bprice)"
+        bitCoinPrice.title = "\(title)=\(bprice) BTC"
         print(statusItem.title)
         self.setChangeIcon(ether.percentChange)
         
