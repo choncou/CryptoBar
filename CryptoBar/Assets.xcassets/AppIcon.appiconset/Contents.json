@@ -25,15 +25,13 @@
       "scale" : "2x"
     },
     {
-      "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "256.png",
+      "size" : "128x128",
       "scale" : "1x"
     },
     {
-      "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "256 copy.png",
+      "size" : "128x128",
       "scale" : "2x"
     },
     {

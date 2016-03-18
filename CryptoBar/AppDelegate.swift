@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     lazy var aboutWindow: AboutWindowController = AboutWindowController(windowNibName: "AboutWindowController")
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(125)
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     var poloniexToken: NotificationToken!
     var coinMarkertToken: NotificationToken!
     var timer: NSTimer!
@@ -57,10 +57,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         title = title.substringFromIndex(title.startIndex.advancedBy(4))
         let price = String(format: "%.2f", dollarPrice)
         let bprice = String(format: "%.4f", ether.last)
-        statusItem.title = "\(title) = $\(price))"
+        statusItem.title = "$\(price))"
         bitCoinPrice.title = "\(title)=\(bprice) BTC"
-        print(statusItem.title)
-        self.setChangeIcon(ether.percentChange)
+        self.setChangeIcon()
     }
     
     func updateStatusBar(results: Results<PoloniexStore>){
@@ -76,25 +75,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         title = title.substringFromIndex(title.startIndex.advancedBy(4))
         let price = String(format: "%.2f", dollarPrice)
         let bprice = String(format: "%.4f", ether.last)
-        statusItem.title = "\(title)=$\(price)"
+        statusItem.title = "$\(price)"
         bitCoinPrice.title = "\(title)=\(bprice) BTC"
-        print(statusItem.title)
-        self.setChangeIcon(ether.percentChange)
+        self.setChangeIcon()
         
     }
     
-    func setChangeIcon(change: Float){
-        let upIcon = NSImage(named: "upIcon")
-        upIcon?.template = true
-        let downIcon = NSImage(named: "downIcon")
-        downIcon?.template = true
+    func setChangeIcon(){
+        let etherIcon = NSImage(named: "EtherIcon")
+        etherIcon?.template = true
         
-        if change > 0{
-            statusItem.image = upIcon
-        }else{
-            statusItem.image = downIcon
-        }
-        statusItem.button?.imagePosition = .ImageRight
+        statusItem.image = etherIcon
+//        statusItem.button?.imagePosition = .ImageLeft
         
     }
     
@@ -106,7 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.startTimer()
         
-        statusItem.title = "Ether Bar"
+        self.setChangeIcon()
         statusItem.menu = statusMenu
         
         startNotification()
