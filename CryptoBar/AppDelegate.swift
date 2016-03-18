@@ -59,7 +59,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let bprice = String(format: "%.4f", ether.last)
         statusItem.title = "$\(price))"
         bitCoinPrice.title = "\(title)=\(bprice) BTC"
-        print(statusItem.title)
         self.setChangeIcon()
     }
     
@@ -78,7 +77,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let bprice = String(format: "%.4f", ether.last)
         statusItem.title = "$\(price)"
         bitCoinPrice.title = "\(title)=\(bprice) BTC"
-        print(statusItem.title)
         self.setChangeIcon()
         
     }
