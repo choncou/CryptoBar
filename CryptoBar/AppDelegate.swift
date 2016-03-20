@@ -21,10 +21,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var timer: NSTimer!
     let realm = try! Realm()
     
+//MARK: IBOutlet
+    
     @IBOutlet weak var statusMenu: NSMenu!
     
     @IBOutlet weak var bitCoinPrice: NSMenuItem!
     
+//MARK: IBAction
     @IBAction func donateButton(sender: NSMenuItem) {
         aboutWindow.window?.makeKeyAndOrderFront(self)
         NSApp.activateIgnoringOtherApps(true)
@@ -35,6 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://www.poloniex.com/exchange#btc_eth")!)
     }
     
+    @IBAction func quitButton(sender: AnyObject) {
+        NSApplication.sharedApplication().terminate(self)
+    }
     
     func startNotification(){
         poloniexToken = realm.objects(PoloniexStore).addNotificationBlock{ results, error in
