@@ -687,6 +687,12 @@
                         <action selector="donateButton:" target="Voe-Tx-rLC" id="HFy-wZ-xTq"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Quit" id="mEe-z5-P4q">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitButton:" target="Voe-Tx-rLC" id="l89-aW-xz6"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="122.5" y="142.5"/>
         </menu>
