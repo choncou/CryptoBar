@@ -67,7 +67,6 @@ struct Tickers: Decodable{
             guard let ticker: Ticker = key <~~ json else{
                 return nil
             }
-            //            key.removeRange(key.startIndex...key.startIndex.advancedBy(4))
             self.tickList[key] = ticker
         }
     }

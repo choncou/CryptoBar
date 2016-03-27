@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C72E40AD919280C550BB13F3'
+               BlueprintIdentifier = '559FA310DD54EB16EFA5FB48'
                BlueprintName = 'Pods-CryptoBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_CryptoBar.framework'>
