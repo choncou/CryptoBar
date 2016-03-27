@@ -40,8 +40,8 @@ class CoinMarketHelper{
         }
     }
     
-    private func scrapePrice(var html: String) -> Float?{
-        
+    private func scrapePrice(html: String) -> Float?{
+        var html = html
         let pos = html.rangeOfString("<span class=\"text-large\">$")
         html.removeRange(html.startIndex..<(pos?.endIndex.advancedBy(1))!)
         let price = html[html.startIndex..<html.startIndex.advancedBy(6)]
@@ -50,8 +50,8 @@ class CoinMarketHelper{
         }
         return number
     }
-    private func scrapeEtherPrice(var html: String) -> Float?{
-        
+    private func scrapeEtherPrice(html: String) -> Float?{
+        var html = html
         let pos = html.rangeOfString("<span class=\"text-large\">$")
         html.removeRange(html.startIndex..<(pos?.endIndex.advancedBy(1))!)
         let price = html[html.startIndex..<html.startIndex.advancedBy(5)]
