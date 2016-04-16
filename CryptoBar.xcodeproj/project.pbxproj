@@ -12,12 +12,7 @@
 		6576039C1C9A76C000DEB3B7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6576039A1C9A76C000DEB3B7 /* MainMenu.xib */; };
 		657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */; };
 		657603A81C9A793B00DEB3B7 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */; };
-		657603AB1C9A79BF00DEB3B7 /* PoloniexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603AA1C9A79BF00DEB3B7 /* PoloniexStore.swift */; };
-		657603AD1C9A79DA00DEB3B7 /* CoinMarketStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603AC1C9A79DA00DEB3B7 /* CoinMarketStore.swift */; };
-		657603B01C9A79F800DEB3B7 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603AF1C9A79F800DEB3B7 /* Ticker.swift */; };
-		657603B31C9A7A3200DEB3B7 /* PoloniexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603B21C9A7A3200DEB3B7 /* PoloniexHelper.swift */; };
 		657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */; };
-		657603B71C9A7A5D00DEB3B7 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603B61C9A7A5D00DEB3B7 /* RealmHelper.swift */; };
 		D17281EC5D66379BF5396D5D /* Pods_CryptoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D25404C118CB2AF9175FCE4 /* Pods_CryptoBar.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +26,7 @@
 		6576039D1C9A76C000DEB3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindowController.swift; sourceTree = "<group>"; };
 		657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
-		657603AA1C9A79BF00DEB3B7 /* PoloniexStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoloniexStore.swift; sourceTree = "<group>"; };
-		657603AC1C9A79DA00DEB3B7 /* CoinMarketStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinMarketStore.swift; sourceTree = "<group>"; };
-		657603AF1C9A79F800DEB3B7 /* Ticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
-		657603B21C9A7A3200DEB3B7 /* PoloniexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoloniexHelper.swift; sourceTree = "<group>"; };
 		657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinMarketHelper.swift; sourceTree = "<group>"; };
-		657603B61C9A7A5D00DEB3B7 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CryptoBar.entitlements; sourceTree = "<group>"; };
 		86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,9 +75,7 @@
 				657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */,
 				657603961C9A76C000DEB3B7 /* AppDelegate.swift */,
 				657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */,
-				657603A91C9A798500DEB3B7 /* Persistance */,
 				657603B11C9A7A1900DEB3B7 /* Helpers */,
-				657603AE1C9A79E800DEB3B7 /* Models */,
 				6576039A1C9A76C000DEB3B7 /* MainMenu.xib */,
 				657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */,
 				6576039D1C9A76C000DEB3B7 /* Info.plist */,
@@ -96,29 +84,10 @@
 			path = CryptoBar;
 			sourceTree = "<group>";
 		};
-		657603A91C9A798500DEB3B7 /* Persistance */ = {
-			isa = PBXGroup;
-			children = (
-				657603AA1C9A79BF00DEB3B7 /* PoloniexStore.swift */,
-				657603AC1C9A79DA00DEB3B7 /* CoinMarketStore.swift */,
-			);
-			name = Persistance;
-			sourceTree = "<group>";
-		};
-		657603AE1C9A79E800DEB3B7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				657603AF1C9A79F800DEB3B7 /* Ticker.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		657603B11C9A7A1900DEB3B7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				657603B21C9A7A3200DEB3B7 /* PoloniexHelper.swift */,
 				657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */,
-				657603B61C9A7A5D00DEB3B7 /* RealmHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -263,11 +232,6 @@
 				657603971C9A76C000DEB3B7 /* AppDelegate.swift in Sources */,
 				657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */,
 				657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */,
-				657603B01C9A79F800DEB3B7 /* Ticker.swift in Sources */,
-				657603B31C9A7A3200DEB3B7 /* PoloniexHelper.swift in Sources */,
-				657603B71C9A7A5D00DEB3B7 /* RealmHelper.swift in Sources */,
-				657603AD1C9A79DA00DEB3B7 /* CoinMarketStore.swift in Sources */,
-				657603AB1C9A79BF00DEB3B7 /* PoloniexStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

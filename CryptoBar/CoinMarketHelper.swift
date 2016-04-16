@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 class CoinMarketHelper{
-    private let realmHelper = RealmHelper()
     
     func getEthereumPrice(){
         Alamofire.request(.GET, "https://coinmarketcap.com/currencies/ethereum/").responseString{ response in
@@ -19,8 +18,7 @@ class CoinMarketHelper{
                 guard let eth_usd = self.scrapeEtherPrice(value) else{
                     return
                 }
-                self.realmHelper.savePrice("ETH", price: eth_usd)
-                self.realmHelper.changeUSDT_ETHlast(eth_usd)
+                //TODO: Save Price
             }
             
         }
@@ -33,8 +31,7 @@ class CoinMarketHelper{
                 guard let btc_usd = self.scrapePrice(value) else{
                     return
                 }
-                self.realmHelper.savePrice("BTC", price: btc_usd)
-                self.realmHelper.changeUSDT_BTClast(btc_usd)
+                //TODO: Save Price
             }
             
         }
