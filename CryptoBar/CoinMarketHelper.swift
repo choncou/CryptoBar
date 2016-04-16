@@ -50,11 +50,15 @@ class CoinMarketHelper{
         }
         return number
     }
+    
     private func scrapeEtherPrice(html: String) -> Float?{
         var html = html
         let pos = html.rangeOfString("<span class=\"text-large\">$")
         html.removeRange(html.startIndex..<(pos?.endIndex.advancedBy(1))!)
-        let price = html[html.startIndex..<html.startIndex.advancedBy(5)]
+        var price = html[html.startIndex..<html.startIndex.advancedBy(5)]
+        if Float(price) == nil {
+            price.removeAtIndex(price.endIndex.predecessor())
+        }
         guard let number = Float(price) else{
             return nil
         }

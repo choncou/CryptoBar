@@ -146,7 +146,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func startTimer() {
         self.callTickers()
-        timer = NSTimer.scheduledTimerWithTimeInterval(320, target: self, selector: Selector("callTickers"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(320, target: self, selector: #selector(AppDelegate.callTickers), userInfo: nil, repeats: true)
     }
     
     func callTickers(){
