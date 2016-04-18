@@ -86,10 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CryptoBar/Alamofire.framework"
   install_framework "Pods-CryptoBar/Gloss.framework"
+  install_framework "Pods-CryptoBar/Realm.framework"
+  install_framework "Pods-CryptoBar/RealmSwift.framework"
   install_framework "Pods-CryptoBar/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CryptoBar/Alamofire.framework"
   install_framework "Pods-CryptoBar/Gloss.framework"
+  install_framework "Pods-CryptoBar/Realm.framework"
+  install_framework "Pods-CryptoBar/RealmSwift.framework"
   install_framework "Pods-CryptoBar/SwiftyJSON.framework"
 fi
