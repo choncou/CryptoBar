@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     lazy var aboutWindow: AboutWindowController = AboutWindowController(windowNibName: "AboutWindowController")
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(60)
     var timer: NSTimer!
     let realmHelper = RealmHelper.sharedInstance
     var storeUpdateNotification: NotificationToken?
