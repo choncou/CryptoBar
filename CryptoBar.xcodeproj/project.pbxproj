@@ -17,8 +17,27 @@
 		65B61BD51CC603E700386D74 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD41CC603E700386D74 /* RealmHelper.swift */; };
 		65B61BD71CC6057E00386D74 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD61CC6057E00386D74 /* Currencies.swift */; };
 		65B61BD91CC6121200386D74 /* CryptoMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD81CC6121200386D74 /* CryptoMenu.swift */; };
+		65DD7C1E1CC6A9B50050036E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C1D1CC6A9B50050036E /* Realm.framework */; };
+		65DD7C1F1CC6A9B50050036E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C1D1CC6A9B50050036E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65DD7C211CC6A9C50050036E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C201CC6A9C50050036E /* Alamofire.framework */; };
+		65DD7C221CC6A9C50050036E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C201CC6A9C50050036E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D17281EC5D66379BF5396D5D /* Pods_CryptoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D25404C118CB2AF9175FCE4 /* Pods_CryptoBar.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65DD7C1C1CC6A87A0050036E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65DD7C1F1CC6A9B50050036E /* Realm.framework in Embed Frameworks */,
+				65DD7C221CC6A9C50050036E /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05D1CBD47410688A561AE1C5 /* Pods-CryptoBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -36,6 +55,8 @@
 		65B61BD41CC603E700386D74 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		65B61BD61CC6057E00386D74 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 		65B61BD81CC6121200386D74 /* CryptoMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMenu.swift; sourceTree = "<group>"; };
+		65DD7C1D1CC6A9B50050036E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "/Users/choncou/Library/Developer/Xcode/DerivedData/CryptoBar-dajiolestrjbojfyozadqqcorudc/Build/Products/Debug/Realm.framework"; sourceTree = "<absolute>"; };
+		65DD7C201CC6A9C50050036E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/choncou/Library/Developer/Xcode/DerivedData/CryptoBar-dajiolestrjbojfyozadqqcorudc/Build/Products/Debug/Alamofire.framework"; sourceTree = "<absolute>"; };
 		86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DD7C1E1CC6A9B50050036E /* Realm.framework in Frameworks */,
 				D17281EC5D66379BF5396D5D /* Pods_CryptoBar.framework in Frameworks */,
+				65DD7C211CC6A9C50050036E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,8 @@
 		6576038A1C9A76C000DEB3B7 = {
 			isa = PBXGroup;
 			children = (
+				65DD7C201CC6A9C50050036E /* Alamofire.framework */,
+				65DD7C1D1CC6A9B50050036E /* Realm.framework */,
 				657603951C9A76C000DEB3B7 /* CryptoBar */,
 				657603941C9A76C000DEB3B7 /* Products */,
 				9EB4C43FAF6C772EC0AA8475 /* Pods */,
@@ -134,6 +159,7 @@
 				657603911C9A76C000DEB3B7 /* Resources */,
 				586A714B4C7BC27D01F3C8DF /* Embed Pods Frameworks */,
 				1F16A7691281B9D1EBEE9F91 /* Copy Pods Resources */,
+				65DD7C1C1CC6A87A0050036E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
