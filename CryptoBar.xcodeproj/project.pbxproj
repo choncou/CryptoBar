@@ -13,6 +13,10 @@
 		657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */; };
 		657603A81C9A793B00DEB3B7 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */; };
 		657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */; };
+		65B61BD31CC5F94700386D74 /* PriceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD21CC5F94700386D74 /* PriceStore.swift */; };
+		65B61BD51CC603E700386D74 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD41CC603E700386D74 /* RealmHelper.swift */; };
+		65B61BD71CC6057E00386D74 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD61CC6057E00386D74 /* Currencies.swift */; };
+		65B61BD91CC6121200386D74 /* CryptoMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD81CC6121200386D74 /* CryptoMenu.swift */; };
 		D17281EC5D66379BF5396D5D /* Pods_CryptoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D25404C118CB2AF9175FCE4 /* Pods_CryptoBar.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,10 @@
 		657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
 		657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinMarketHelper.swift; sourceTree = "<group>"; };
 		657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CryptoBar.entitlements; sourceTree = "<group>"; };
+		65B61BD21CC5F94700386D74 /* PriceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceStore.swift; sourceTree = "<group>"; };
+		65B61BD41CC603E700386D74 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		65B61BD61CC6057E00386D74 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		65B61BD81CC6121200386D74 /* CryptoMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMenu.swift; sourceTree = "<group>"; };
 		86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +83,11 @@
 				657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */,
 				657603961C9A76C000DEB3B7 /* AppDelegate.swift */,
 				657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */,
+				65B61BD61CC6057E00386D74 /* Currencies.swift */,
+				65B61BD11CC5F92100386D74 /* Persistance */,
 				657603B11C9A7A1900DEB3B7 /* Helpers */,
 				6576039A1C9A76C000DEB3B7 /* MainMenu.xib */,
+				65B61BD81CC6121200386D74 /* CryptoMenu.swift */,
 				657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */,
 				6576039D1C9A76C000DEB3B7 /* Info.plist */,
 				657603981C9A76C000DEB3B7 /* Assets.xcassets */,
@@ -90,6 +101,15 @@
 				657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		65B61BD11CC5F92100386D74 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				65B61BD21CC5F94700386D74 /* PriceStore.swift */,
+				65B61BD41CC603E700386D74 /* RealmHelper.swift */,
+			);
+			name = Persistance;
 			sourceTree = "<group>";
 		};
 		9EB4C43FAF6C772EC0AA8475 /* Pods */ = {
@@ -229,9 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B61BD71CC6057E00386D74 /* Currencies.swift in Sources */,
 				657603971C9A76C000DEB3B7 /* AppDelegate.swift in Sources */,
+				65B61BD51CC603E700386D74 /* RealmHelper.swift in Sources */,
 				657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */,
 				657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */,
+				65B61BD91CC6121200386D74 /* CryptoMenu.swift in Sources */,
+				65B61BD31CC5F94700386D74 /* PriceStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
