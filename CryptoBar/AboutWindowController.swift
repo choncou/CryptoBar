@@ -10,16 +10,9 @@ import Cocoa
 
 class AboutWindowController: NSWindowController {
 
-    @IBOutlet weak var bitCoinTextView: NSTextField!
-    @IBOutlet weak var etherTextView: NSTextField!
-    
-    
-    override func windowDidLoad() {
-        super.windowDidLoad()
-        bitCoinTextView.editable = false
-        etherTextView.editable = false
-        
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    @IBAction func githubTap(sender: NSButton) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/choncou/CryptoBar")!)
     }
+    
     
 }

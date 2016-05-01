@@ -8,18 +8,37 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class RealmHelper {
-    static var sharedInstance = RealmHelper()
     let realm = try! Realm()
     
-    func savePrice(currency: Currencies, price: Float, btcValue: Float) {
-        let priceStore = PriceStore()
-        priceStore.currencyName = currency.rawValue
-        priceStore.price = price
-        priceStore.btcValue = btcValue
-        try! realm.write({ 
-            realm.add(priceStore, update: true)
+    /**
+     Save a ticker to Realm
+     
+     - parameter json: json of the ticker to be stored
+     */
+    func saveTicker(json: JSON) {
+        let ticker = TickerStore(json: json)
+        try! realm.write({
+            realm.add(ticker, update: true)
+        })
+    }
+    
+    /**
+     Save a collection of tickers to Realm
+     
+     - parameter json: json of the tickers to be stored
+     */
+    func saveAllTickers(json: JSON) {
+        var tickers: [TickerStore] = []
+        for ticker in json {
+            tickers.append(TickerStore(json: ticker.1))
+        }
+        try! realm.write({
+            for ticker in tickers {
+                realm.add(ticker, update: true)
+            }
         })
     }
     
@@ -30,8 +49,8 @@ class RealmHelper {
      
      - returns: PriceStore object of currency's price
      */
-    func getPrice(currency: Currencies) -> PriceStore? {
-        let price = realm.objects(PriceStore).filter("currencyName = '\(currency.rawValue)'")
+    func getPrice(currency: Currencies) -> TickerStore? {
+        let price = realm.objects(TickerStore).filter("symbol = '\(currency.rawValue)'")
         return price.first
     }
 }
