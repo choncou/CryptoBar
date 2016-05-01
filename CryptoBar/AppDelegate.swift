@@ -16,13 +16,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var aboutWindow: AboutWindowController = AboutWindowController(windowNibName: "AboutWindowController")
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(60)
     var timer: NSTimer!
-    let realmHelper = RealmHelper.sharedInstance
+    let realmHelper = RealmHelper()
     var storeUpdateNotification: NotificationToken?
     let realm = try! Realm()
     
 //MARK: IBOutlet
     
-    @IBOutlet weak var statusMenu: CryptoMenu!
+    @IBOutlet weak var statusMenu: NSMenu!
     
     @IBOutlet weak var btcValueMenuItem: NSMenuItem!
     
@@ -50,25 +50,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     /**
      Set Icon for statusItem
      */
-    func setChangeIcon(){
+    func setIcon(){
         let etherIcon = NSImage(named: "EtherIcon")
         etherIcon?.template = true
         
         statusItem.image = etherIcon
+    }
+    /**
+     Set increase or decrease image for Percentage change
+     */
+    func setChangeIcon(percent_change: Float){
+        let downIcon = NSImage(named: "downIcon")
+        let upIcon = NSImage(named: "upIcon")
+        
+        if percent_change > 0 {
+            btcValueMenuItem.image = upIcon
+        } else {
+            btcValueMenuItem.image = downIcon
+        }
     }
     
     /**
      Update price values in menu
      */
     func updateUI() {
-        let priceStore = realmHelper.getPrice(.ETH)
-        guard let store = priceStore else {
+        let tickerStore = realmHelper.getPrice(.ETH)
+        guard let store = tickerStore else {
             return
         }
         let roundedPrice = String(format: "%.2f", store.price)
-        let roundedBtcVal = String(format: "%.7f", store.btcValue)
+        let roundedChange = String(format: "%.2f", store.percent_change_24h)
+        setChangeIcon(store.percent_change_24h)
         statusItem.title = "$\(roundedPrice)"
-        btcValueMenuItem.title = "\(store.currencyName)=\(roundedBtcVal)"
+        btcValueMenuItem.title = "\(roundedChange)%"
     }
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -76,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
-            schemaVersion: 2,
+            schemaVersion: 3,
             
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above
@@ -100,7 +114,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.startTimer()
         self.startNotifications()
         
-        self.setChangeIcon()
+        self.setIcon()
         statusItem.menu = statusMenu
     }
     
@@ -120,13 +134,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /**
          *  Start a realmNotification to UpdateUI everytime new data is saved
          */
-        storeUpdateNotification = realm.addNotificationBlock { notification, realm in
+        let results = realm.objects(TickerStore).filter("symbol = '\(Currencies.ETH.rawValue)'")
+        storeUpdateNotification = results.addNotificationBlock { notification, realm in
             self.updateUI()
         }
     }
     
     func getNewPrice() {
-        CoinMarketHelper().getEthereumPrice()
+        CoinMarketHelper().getAllPrices()
     }
     
     

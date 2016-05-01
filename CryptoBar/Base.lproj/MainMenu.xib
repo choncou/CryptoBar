@@ -667,7 +667,7 @@
                 </menuItem>
             </items>
         </menu>
-        <menu id="67Z-4a-B3h" customClass="CryptoMenu" customModule="CryptoBar" customModuleProvider="target">
+        <menu id="67Z-4a-B3h">
             <items>
                 <menuItem title="BTC Price" id="h1i-Zw-UKa">
                     <modifierMask key="keyEquivalentModifierMask"/>
