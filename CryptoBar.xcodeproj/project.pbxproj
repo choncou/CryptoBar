@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655DC03F1CD2677500FDA328 /* TickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655DC03E1CD2677500FDA328 /* TickerStore.swift */; };
 		657603971C9A76C000DEB3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603961C9A76C000DEB3B7 /* AppDelegate.swift */; };
 		657603991C9A76C000DEB3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657603981C9A76C000DEB3B7 /* Assets.xcassets */; };
 		6576039C1C9A76C000DEB3B7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6576039A1C9A76C000DEB3B7 /* MainMenu.xib */; };
 		657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603A51C9A793B00DEB3B7 /* AboutWindowController.swift */; };
 		657603A81C9A793B00DEB3B7 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */; };
 		657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */; };
-		65B61BD31CC5F94700386D74 /* PriceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD21CC5F94700386D74 /* PriceStore.swift */; };
 		65B61BD51CC603E700386D74 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD41CC603E700386D74 /* RealmHelper.swift */; };
 		65B61BD71CC6057E00386D74 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD61CC6057E00386D74 /* Currencies.swift */; };
-		65B61BD91CC6121200386D74 /* CryptoMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B61BD81CC6121200386D74 /* CryptoMenu.swift */; };
 		65DD7C1E1CC6A9B50050036E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C1D1CC6A9B50050036E /* Realm.framework */; };
 		65DD7C1F1CC6A9B50050036E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C1D1CC6A9B50050036E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65DD7C211CC6A9C50050036E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD7C201CC6A9C50050036E /* Alamofire.framework */; };
@@ -42,6 +41,7 @@
 /* Begin PBXFileReference section */
 		05D1CBD47410688A561AE1C5 /* Pods-CryptoBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.debug.xcconfig"; sourceTree = "<group>"; };
 		1D25404C118CB2AF9175FCE4 /* Pods_CryptoBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		655DC03E1CD2677500FDA328 /* TickerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerStore.swift; sourceTree = "<group>"; };
 		657603931C9A76C000DEB3B7 /* CryptoBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657603961C9A76C000DEB3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		657603981C9A76C000DEB3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,10 +51,8 @@
 		657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindowController.xib; sourceTree = "<group>"; };
 		657603B41C9A7A4800DEB3B7 /* CoinMarketHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinMarketHelper.swift; sourceTree = "<group>"; };
 		657603B81C9A833800DEB3B7 /* CryptoBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CryptoBar.entitlements; sourceTree = "<group>"; };
-		65B61BD21CC5F94700386D74 /* PriceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceStore.swift; sourceTree = "<group>"; };
 		65B61BD41CC603E700386D74 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		65B61BD61CC6057E00386D74 /* Currencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
-		65B61BD81CC6121200386D74 /* CryptoMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoMenu.swift; sourceTree = "<group>"; };
 		65DD7C1D1CC6A9B50050036E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Realm.framework; path = "/Users/choncou/Library/Developer/Xcode/DerivedData/CryptoBar-dajiolestrjbojfyozadqqcorudc/Build/Products/Debug/Realm.framework"; sourceTree = "<absolute>"; };
 		65DD7C201CC6A9C50050036E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/choncou/Library/Developer/Xcode/DerivedData/CryptoBar-dajiolestrjbojfyozadqqcorudc/Build/Products/Debug/Alamofire.framework"; sourceTree = "<absolute>"; };
 		86B22D38A23B83B325B53AC7 /* Pods-CryptoBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoBar/Pods-CryptoBar.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				65B61BD11CC5F92100386D74 /* Persistance */,
 				657603B11C9A7A1900DEB3B7 /* Helpers */,
 				6576039A1C9A76C000DEB3B7 /* MainMenu.xib */,
-				65B61BD81CC6121200386D74 /* CryptoMenu.swift */,
 				657603A61C9A793B00DEB3B7 /* AboutWindowController.xib */,
 				6576039D1C9A76C000DEB3B7 /* Info.plist */,
 				657603981C9A76C000DEB3B7 /* Assets.xcassets */,
@@ -131,7 +128,7 @@
 		65B61BD11CC5F92100386D74 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
-				65B61BD21CC5F94700386D74 /* PriceStore.swift */,
+				655DC03E1CD2677500FDA328 /* TickerStore.swift */,
 				65B61BD41CC603E700386D74 /* RealmHelper.swift */,
 			);
 			name = Persistance;
@@ -276,12 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B61BD71CC6057E00386D74 /* Currencies.swift in Sources */,
+				655DC03F1CD2677500FDA328 /* TickerStore.swift in Sources */,
 				657603971C9A76C000DEB3B7 /* AppDelegate.swift in Sources */,
 				65B61BD51CC603E700386D74 /* RealmHelper.swift in Sources */,
 				657603A71C9A793B00DEB3B7 /* AboutWindowController.swift in Sources */,
 				657603B51C9A7A4800DEB3B7 /* CoinMarketHelper.swift in Sources */,
-				65B61BD91CC6121200386D74 /* CryptoMenu.swift in Sources */,
-				65B61BD31CC5F94700386D74 /* PriceStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

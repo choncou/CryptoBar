@@ -2,12 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AboutWindowController" customModule="CryptoBar" customModuleProvider="target">
             <connections>
-                <outlet property="bitCoinTextView" destination="4cF-GK-Or7" id="G8f-Az-qqP"/>
-                <outlet property="etherTextView" destination="vrY-F6-dnX" id="aJd-bJ-O0b"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -16,91 +15,178 @@
         <window title="CryptoBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES"/>
-            <rect key="contentRect" x="393" y="302" width="743" height="442"/>
+            <rect key="contentRect" x="393" y="257" width="744" height="500"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="743" height="442"/>
+                <rect key="frame" x="0.0" y="0.0" width="744" height="500"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSM-We-6dG">
-                        <rect key="frame" x="0.0" y="0.0" width="743" height="441"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-An-uvI">
+                        <rect key="frame" x="289" y="440" width="165" height="40"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="CryptoBar" id="ifK-bF-WwD">
+                            <font key="font" size="33" name="HelveticaNeue-Medium"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVJ-Ik-H0l" userLabel="Donation Stack">
+                        <rect key="frame" x="20" y="45" width="704" height="265"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qq9-aQ-Qc4">
-                                <rect key="frame" x="135" y="287" width="433" height="74"/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" id="Wmz-Uk-ghw">
-                                    <font key="font" size="13" name="HelveticaNeue"/>
-                                    <string key="title">CryptoBar makes it simple for you to view the current price of Ethereum at a glance, through your Macs status bar.                                    Developed by: Unathi Chonco</string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60k-nX-RrC">
-                                <rect key="frame" x="266" y="376" width="171" height="45"/>
-                                <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="CryptoBar" id="sve-9F-iSu">
-                                    <font key="font" size="33" name="HelveticaNeue-Medium"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpE-gW-rmb">
-                                <rect key="frame" x="90" y="102" width="193" height="165"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BTC" id="arJ-T8-lh8"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL3-at-N8N">
-                                <rect key="frame" x="266" y="20" width="201" height="23"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="All donations are appreciated." id="9cB-B2-U83">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cF-GK-Or7">
-                                <rect key="frame" x="20" y="82" width="332" height="22"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1JfFWnPoB1mcQEDAwkBNY3xRKg5UKv3tWH" drawsBackground="YES" id="oN4-vl-Dyh">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrY-F6-dnX">
-                                <rect key="frame" x="391" y="82" width="332" height="22"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="0xc64fE5E8ca55A0e632f1f8EA9Dbb30a5DACbE8fA" drawsBackground="YES" id="W7R-rF-cil">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t82-fG-AEW">
-                                <rect key="frame" x="526" y="268" width="63" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ethereum" id="yqB-y0-H3X">
-                                    <font key="font" size="13" name="HelveticaNeue-Medium"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="twi-K5-zgS">
-                                <rect key="frame" x="467" y="107" width="181" height="155"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ETH" id="FhB-96-o4u"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-By-T6z">
-                                <rect key="frame" x="163" y="265" width="51" height="20"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bitcoin" id="VdD-YS-nAS">
-                                    <font key="font" size="13" name="HelveticaNeue-Medium"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fillProportionally" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAo-y5-iy6" userLabel="BitcoinStackView">
+                                <rect key="frame" x="0.0" y="0.0" width="348" height="265"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XIa-YV-SMc">
+                                        <rect key="frame" x="151" y="248" width="46" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bitcoin" id="fUc-6i-ciO">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ddV-be-UC3">
+                                        <rect key="frame" x="81" y="26" width="186" height="214"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BTC" id="9XX-Ms-Cex"/>
+                                    </imageView>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tjh-rk-rvc">
+                                        <rect key="frame" x="22" y="0.0" width="304" height="18"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="1JfFWnPoB1mcQEDAwkBNY3xRKg5UKv3tWH" id="h4p-v7-CaS">
+                                            <font key="font" metaFont="system" size="14"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="gOJ-ye-dhX"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fillProportionally" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-af-EjF" userLabel="EthereumStackView">
+                                <rect key="frame" x="356" y="0.0" width="348" height="265"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q4O-zv-aMa">
+                                        <rect key="frame" x="142" y="248" width="63" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ethereum" id="LeM-XD-Q3u">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eS4-dY-6dp">
+                                        <rect key="frame" x="69" y="26" width="210" height="214"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ETH" id="D6q-J9-Fpd"/>
+                                    </imageView>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uqr-aN-dRA">
+                                        <rect key="frame" x="-1" y="0.0" width="350" height="18"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="0xc64fE5E8ca55A0e632f1f8EA9Dbb30a5DACbE8fA" id="VIL-WM-Mm9">
+                                            <font key="font" metaFont="system" size="14"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="cpZ-ya-7lz"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
-                    </view>
+                        <constraints>
+                            <constraint firstItem="CAo-y5-iy6" firstAttribute="leading" secondItem="sVJ-Ik-H0l" secondAttribute="leading" id="8xL-R1-XSq"/>
+                            <constraint firstAttribute="bottom" secondItem="fgj-af-EjF" secondAttribute="bottom" id="Uhs-sH-YEy"/>
+                            <constraint firstItem="fgj-af-EjF" firstAttribute="top" secondItem="sVJ-Ik-H0l" secondAttribute="top" id="gAq-b7-W1r"/>
+                            <constraint firstAttribute="bottom" secondItem="CAo-y5-iy6" secondAttribute="bottom" id="oRq-Pe-Sta"/>
+                            <constraint firstAttribute="trailing" secondItem="fgj-af-EjF" secondAttribute="trailing" id="pa4-23-jEB"/>
+                            <constraint firstItem="CAo-y5-iy6" firstAttribute="top" secondItem="sVJ-Ik-H0l" secondAttribute="top" id="pgd-Bf-8Rm"/>
+                        </constraints>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pog-XA-SH0">
+                        <rect key="frame" x="144" y="374" width="456" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="58" id="1Hi-W7-PSX"/>
+                            <constraint firstAttribute="width" constant="452" id="gWI-pv-r9l"/>
+                        </constraints>
+                        <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" id="bkl-A7-slo">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">CryptoBar makes it simple for you to view the current price of Ethereum at a glance, through your Macs status bar.
+View Source: https://github.com/choncou/CryptoBar</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-5l-Hhb">
+                        <rect key="frame" x="277" y="20" width="189" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="All donations are appreciated." id="51P-jI-o26">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="fhK-VL-j8c">
+                        <rect key="frame" x="348" y="318" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="LSx-nE-yRj"/>
+                            <constraint firstAttribute="height" constant="48" id="qr3-i0-cuw"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Github" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="cHn-e4-eXD">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="githubTap:" target="-2" id="Vyh-Qw-WaD"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Pog-XA-SH0" firstAttribute="top" secondItem="G7p-An-uvI" secondAttribute="bottom" constant="8" id="Mwi-76-lvH"/>
+                    <constraint firstItem="Xal-5l-Hhb" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="S3h-x5-c2n"/>
+                    <constraint firstItem="fhK-VL-j8c" firstAttribute="top" secondItem="Pog-XA-SH0" secondAttribute="bottom" constant="8" id="XOd-9w-O6B"/>
+                    <constraint firstItem="Pog-XA-SH0" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="gbc-cO-GSY"/>
+                    <constraint firstItem="G7p-An-uvI" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="mlI-X1-GN3"/>
+                    <constraint firstItem="sVJ-Ik-H0l" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="pcG-rL-RTT"/>
+                    <constraint firstItem="sVJ-Ik-H0l" firstAttribute="top" secondItem="fhK-VL-j8c" secondAttribute="bottom" constant="8" id="rNg-ar-fr9"/>
+                    <constraint firstItem="Xal-5l-Hhb" firstAttribute="top" secondItem="sVJ-Ik-H0l" secondAttribute="bottom" constant="8" id="uJQ-TV-Rzi"/>
+                    <constraint firstItem="G7p-An-uvI" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="wRO-5h-oY7"/>
+                    <constraint firstItem="fhK-VL-j8c" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="wqH-Az-pR2"/>
+                    <constraint firstAttribute="trailing" secondItem="sVJ-Ik-H0l" secondAttribute="trailing" constant="20" id="y9i-n1-dPD"/>
+                    <constraint firstAttribute="bottom" secondItem="Xal-5l-Hhb" secondAttribute="bottom" constant="20" id="zc7-8h-TTU"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="244.5" y="358.5"/>
         </window>
     </objects>
     <resources>
-        <image name="BTC" width="250" height="250"/>
-        <image name="ETH" width="370" height="370"/>
+        <image name="BTC" width="186" height="186"/>
+        <image name="ETH" width="210" height="210"/>
+        <image name="Github" width="120" height="120"/>
     </resources>
 </document>
